@@ -3,4 +3,3 @@
 **Completed:**
 - Movement
 - Flashlight
-- Doors
