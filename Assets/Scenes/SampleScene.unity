@@ -365,6 +365,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1988509
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.0249633
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 5538046256709979738, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889977630158665, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.4301836
@@ -381,13 +401,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.105
       objectReference: {fileID: 0}
+    - target: {fileID: 8461889977630158667, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8461889977630158670, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166274, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_Name
       value: Door Front
       objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166284, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: doorOpenAngle
-      value: 75
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166284, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: doorCloseAngle
@@ -1089,6 +1117,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6394341
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2467418
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.139
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889977630158665, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.2923353
@@ -1571,6 +1611,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6271225
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.012
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889977630158665, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.224347
@@ -2104,6 +2156,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5503727
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1199449
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.071
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.224
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889977630158665, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.1083932
@@ -2450,6 +2518,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.791566
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.247676
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.209
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889977630158665, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.581501
@@ -2472,7 +2552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166284, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: doorOpenAngle
-      value: 115
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166284, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: doorCloseAngle
@@ -2757,6 +2837,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6641079
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2559006
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.206
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889977630158665, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 3.3295226
@@ -2866,6 +2958,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.029
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166274, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_Name
       value: Door 1F 1
@@ -2928,6 +3024,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 23790859}
     m_Modifications:
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.3268188
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1024598
+      objectReference: {fileID: 0}
+    - target: {fileID: 1094230188127122267, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.038
+      objectReference: {fileID: 0}
     - target: {fileID: 8461889977630158665, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: m_LocalScale.x
       value: 2.7
@@ -2950,7 +3058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166284, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: doorOpenAngle
-      value: -30
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 8461889978255166284, guid: 679c89b40c3473e4f866b46ea3786c3c, type: 3}
       propertyPath: doorCloseAngle
