@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * walkSpeed + Vector3.up * velocityY;
 
-        Controller.Move(velocity * Time.deltaTime);
+        if(Controller.enabled == true)
+            Controller.Move(velocity * Time.deltaTime);
     }
 }
