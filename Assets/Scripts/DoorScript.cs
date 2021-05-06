@@ -3,6 +3,7 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     [SerializeField] private bool doorOpen = false;
+    [SerializeField] private bool openVertically = true;
     [SerializeField] private float doorOpenAngle = 90f; // -90 to rotate in the other direction
     [SerializeField] private float doorCloseAngle = 0f;
     [SerializeField] private float doorMovementSmooth = 2f;
@@ -28,13 +29,29 @@ public class DoorScript : MonoBehaviour
     {
         if (doorOpen)
         {
-            Quaternion targetRotation = Quaternion.Euler(0, doorOpenAngle, 0);
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, doorMovementSmooth * Time.deltaTime);
+            if (openVertically)
+            { 
+                Quaternion targetRotation = Quaternion.Euler(0, doorOpenAngle, 0);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, doorMovementSmooth * Time.deltaTime);
+            }
+            else
+            {
+                Quaternion targetRotation = Quaternion.Euler(0, 0, doorOpenAngle);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, doorMovementSmooth * Time.deltaTime);
+            }
         }
         else
         {
-            Quaternion targetRotation = Quaternion.Euler(0, doorCloseAngle, 0);
-            transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, doorMovementSmooth * Time.deltaTime);
+            if (openVertically)
+            {
+                Quaternion targetRotation = Quaternion.Euler(0, doorCloseAngle, 0);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, doorMovementSmooth * Time.deltaTime);
+            }
+            else
+            {
+                Quaternion targetRotation = Quaternion.Euler(0, 0, doorCloseAngle);
+                transform.localRotation = Quaternion.Slerp(transform.localRotation, targetRotation, doorMovementSmooth * Time.deltaTime);
+            }
         }
     }
 

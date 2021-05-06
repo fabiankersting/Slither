@@ -17,6 +17,10 @@ public class InteractScript : MonoBehaviour
                 {
                     hit.collider.transform.parent.GetComponent<DoorScript>().ChangeDoorState();
                 }
+                if (hit.collider.CompareTag("Drawer"))
+                {
+                    hit.collider.transform.parent.GetComponent<DrawerScript>().ChangeDrawerState();
+                }
             }
         }
     }
