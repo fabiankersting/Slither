@@ -3,4 +3,4 @@
 **Completed:**
 - Movement
 - Flashlight
-- Doors
+- Doors & Drawers
