@@ -4,6 +4,7 @@ public class InteractScript : MonoBehaviour
 {
     [SerializeField] private float interactDistance = 5f;
     private GameObject lastHitGO = null;
+    private GameObject lastHitNote = null;
 
     void Update()
     {
@@ -44,6 +45,19 @@ public class InteractScript : MonoBehaviour
                 if (hit.collider.CompareTag("Drawer"))
                 {
                     hit.collider.transform.parent.GetComponent<DrawerScript>().ChangeDrawerState();
+                }
+                if (hit.collider.CompareTag("Note"))
+                {
+                    hit.collider.transform.parent.GetComponent<NoteScript>().ChangeNoteVisibility();
+                    lastHitNote = hit.collider.gameObject;
+                }
+                if (hit.collider.CompareTag("NoteClose"))
+                {
+                    lastHitNote.transform.parent.GetComponent<NoteScript>().ChangeNoteVisibility();
+                }
+                if (hit.collider.CompareTag("Key"))
+                {
+                    hit.collider.transform.parent.GetComponent<KeyScript>().SetDoorUnlocked();
                 }
             }
         }

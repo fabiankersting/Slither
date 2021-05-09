@@ -3,12 +3,14 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour
 {
     [SerializeField] private bool doorOpen = false;
+    [SerializeField] private bool doorUnlocked = true;
     [SerializeField] private bool openVertically = true;
     [SerializeField] private float doorOpenAngle = 90f; // -90 to rotate in the other direction
     [SerializeField] private float doorCloseAngle = 0f;
     [SerializeField] private float doorMovementSmooth = 2f;
 
     [SerializeField] private AudioClip doorSound = null;
+    [SerializeField] private AudioClip doorLockedSound = null;
 
     AudioSource _source = null;
     AudioSource Source
@@ -57,8 +59,18 @@ public class DoorScript : MonoBehaviour
 
     public void ChangeDoorState()
     {
-        doorOpen = !doorOpen;
-        PlaySFX(doorSound);
+        if (doorUnlocked)
+        {
+            doorOpen = !doorOpen;
+            PlaySFX(doorSound);
+        }
+        else
+            PlaySFX(doorLockedSound);
+    }
+
+    public void UnlockDoor()
+    {
+        doorUnlocked = true;
     }
 
     private void PlaySFX(AudioClip clip)

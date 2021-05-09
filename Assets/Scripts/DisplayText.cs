@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class DisplayText : MonoBehaviour
 {
     [SerializeField] private string objectName;
+    [SerializeField] private Color textColor = Color.white;
     [SerializeField] private Text textObjectFront;
     [SerializeField] private Text textObjectBack;
     [SerializeField] private float fadeTime;
@@ -45,8 +46,8 @@ public class DisplayText : MonoBehaviour
         {
             textObjectFront.text = objectName;
             textObjectBack.text = objectName;
-            textObjectFront.color = Color.Lerp(textObjectFront.color, Color.white, fadeTime * Time.deltaTime);
-            textObjectBack.color = Color.Lerp(textObjectBack.color, Color.white, fadeTime * Time.deltaTime);
+            textObjectFront.color = Color.Lerp(textObjectFront.color, textColor, fadeTime * Time.deltaTime);
+            textObjectBack.color = Color.Lerp(textObjectBack.color, textColor, fadeTime * Time.deltaTime);
         }
         else
         {
