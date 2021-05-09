@@ -7,6 +7,9 @@ TagManager:
   - Door
   - Ladder
   - Drawer
+  - Note
+  - NoteClose
+  - Key
   layers:
   - Default
   - TransparentFX
