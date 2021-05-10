@@ -85,7 +85,7 @@ MonoBehaviour:
   drawerOpenDistance: -0.645
   drawerCloseDistance: -0.058
   drawerMovementSmooth: 2
-  drawerSound: {fileID: 8300000, guid: 21b7035d43f5c1046b81c062ee61a191, type: 3}
+  drawerSound: {fileID: 8300000, guid: e4a520656d71cc249a375e0405aef0c3, type: 3}
 --- !u!82 &4036052423287659774
 AudioSource:
   m_ObjectHideFlags: 0
@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Drawer
+  textColor: {r: 1, g: 1, b: 1, a: 1}
   textObjectFront: {fileID: 0}
   textObjectBack: {fileID: 0}
   fadeTime: 3
@@ -251,7 +252,7 @@ MonoBehaviour:
   drawerOpenDistance: -0.645
   drawerCloseDistance: -0.058
   drawerMovementSmooth: 2
-  drawerSound: {fileID: 8300000, guid: 21b7035d43f5c1046b81c062ee61a191, type: 3}
+  drawerSound: {fileID: 8300000, guid: e4a520656d71cc249a375e0405aef0c3, type: 3}
 --- !u!82 &4036052424738204968
 AudioSource:
   m_ObjectHideFlags: 0
@@ -361,6 +362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectName: Drawer
+  textColor: {r: 1, g: 1, b: 1, a: 1}
   textObjectFront: {fileID: 0}
   textObjectBack: {fileID: 0}
   fadeTime: 3
