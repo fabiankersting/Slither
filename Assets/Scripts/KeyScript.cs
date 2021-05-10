@@ -4,6 +4,9 @@ using UnityEngine;
 public class KeyScript : MonoBehaviour
 {
     [SerializeField] private GameObject doorToUnlock = null;
+    [SerializeField] private GameObject keyModel1 = null;
+    [SerializeField] private GameObject keyModel2 = null;
+    [SerializeField] private GameObject keyModel3 = null;
 
     [SerializeField] private AudioClip keySound = null;
 
@@ -31,6 +34,9 @@ public class KeyScript : MonoBehaviour
 
     private IEnumerator DelayedDeactivate(float duration)
     {
+        keyModel1.SetActive(false);
+        keyModel2.SetActive(false);
+        keyModel3.SetActive(false);
         yield return new WaitForSeconds(duration);
         gameObject.SetActive(false);
     }
