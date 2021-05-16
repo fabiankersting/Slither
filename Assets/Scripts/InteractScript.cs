@@ -59,6 +59,14 @@ public class InteractScript : MonoBehaviour
                 {
                     hit.collider.transform.parent.GetComponent<KeyScript>().SetDoorUnlocked();
                 }
+                if (hit.collider.CompareTag("Bed"))
+                {
+                    hit.collider.transform.parent.GetComponent<BedScript>().ChangeScene();
+                }
+                if (hit.collider.CompareTag("LightSwitch"))
+                {
+                    hit.collider.transform.parent.GetComponent<LightSwitchScript>().ChangeLightState();
+                }
             }
         }
     }
