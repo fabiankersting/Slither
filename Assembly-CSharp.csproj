@@ -77,6 +77,8 @@
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\2DTools\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\TerrainQualitySettings.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\TreeExplosion.cs" />
+    <Compile Include="Assets\Scripts\BedScript.cs" />
+    <Compile Include="Assets\Scripts\LightSwitchScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
