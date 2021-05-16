@@ -8,3 +8,6 @@
 - Crosshair
 - Notes
 - Keys
+- Lights + Light Switches
+- Night and Day Scene
+- Bed transitions to night
