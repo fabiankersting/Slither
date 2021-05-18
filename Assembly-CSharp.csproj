@@ -60,7 +60,9 @@
     <Compile Include="Assets\Scripts\DoorScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\SpawnInArea.cs" />
     <Compile Include="Assets\Scripts\NoteScript.cs" />
+    <Compile Include="Assets\Scripts\LadderScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_CustomWind.cs" />
+    <Compile Include="Assets\Scripts\LaddderScript.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
     <Compile Include="Assets\Scripts\DrawerScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Example Data\Scripts\SimpleSmoothMouseLook.cs" />
@@ -73,12 +75,13 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\SnakeHead.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\ForceGrassDistanceInEditor.cs" />
+    <Compile Include="Assets\Scripts\BedScript.cs" />
     <Compile Include="Assets\Scripts\KeyScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\2DTools\Scripts\Camera2DFollow.cs" />
+    <Compile Include="Assets\Scripts\LightSwitchScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\TerrainQualitySettings.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\TreeExplosion.cs" />
-    <Compile Include="Assets\Scripts\BedScript.cs" />
-    <Compile Include="Assets\Scripts\LightSwitchScript.cs" />
+    <Compile Include="Assets\Scripts\MainMenuScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
