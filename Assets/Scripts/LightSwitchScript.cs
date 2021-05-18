@@ -1,9 +1,10 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class LightSwitchScript : MonoBehaviour
 {
     [SerializeField] private bool lightOn = false;
-    [SerializeField] private GameObject connectedLight = null;
+    [SerializeField] private List<GameObject> connectedLights = new List<GameObject>();
 
     [SerializeField] private AudioClip switchSound = null;
 
@@ -25,7 +26,10 @@ public class LightSwitchScript : MonoBehaviour
     public void ChangeLightState()
     {
         lightOn = !lightOn;
-        connectedLight.SetActive(lightOn);
+
+        foreach(var light in connectedLights)
+            light.SetActive(lightOn);
+
         PlaySFX(switchSound);
     }
 

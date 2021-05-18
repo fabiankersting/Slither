@@ -1,24 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SnakeHead : MonoBehaviour
 {
+    private GameObject player = null;
 
-    public Transform Player;
-    public float headMoveSpeed;
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private float headMoveSpeed = 6;
+    private void Awake()
     {
-        headMoveSpeed = 6;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        var lookPos = Player.position - transform.position;
+        if (player == null)
+            player = GameObject.FindGameObjectWithTag("Player");
+
+        var lookPos = player.transform.position - transform.position;
         Quaternion rotation = Quaternion.LookRotation(lookPos);
-    
         transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime*headMoveSpeed);
     }
 }
