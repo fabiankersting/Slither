@@ -11,3 +11,4 @@
 - Lights + Light Switches
 - Night and Day Scene
 - Bed transitions to night
+- Main Menu
