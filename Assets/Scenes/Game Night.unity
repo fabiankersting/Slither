@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.055867665, g: 0.052812763, b: 0.0452791, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -435,7 +435,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &64410820
 PrefabInstance:
@@ -599,7 +599,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 802106263079905117, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 53.95
+      value: 53.33
       objectReference: {fileID: 0}
     - target: {fileID: 802106263079905117, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1124,7 +1124,7 @@ Transform:
   - {fileID: 1505426009}
   - {fileID: 160765060}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &259286307 stripped
 Transform:
@@ -1359,7 +1359,7 @@ Transform:
   - {fileID: 884615764}
   - {fileID: 1043016663}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &302534531
 PrefabInstance:
@@ -3233,7 +3233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6387243299866668798, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6387243299866668798, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -4051,7 +4051,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6387243299866668798, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6387243299866668798, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -4292,7 +4292,7 @@ Transform:
   m_Children:
   - {fileID: 1611470962}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &848837194
 GameObject:
@@ -4679,7 +4679,7 @@ Transform:
   m_Children:
   - {fileID: 1616463661}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &927833963 stripped
 GameObject:
@@ -5114,7 +5114,7 @@ Transform:
   - {fileID: 1769686999}
   - {fileID: 406544812}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1038054041
 GameObject:
@@ -5152,7 +5152,7 @@ Transform:
   - {fileID: 899831236}
   - {fileID: 91185899}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1043016663 stripped
 Transform:
@@ -5621,7 +5621,7 @@ Transform:
   - {fileID: 543450651984160752}
   - {fileID: 1455709727}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1184386440
 PrefabInstance:
@@ -5834,8 +5834,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.9474255, b: 0.6084906, a: 1}
-  m_Intensity: 6
-  m_Range: 10
+  m_Intensity: 3
+  m_Range: 20
   m_SpotAngle: 120
   m_InnerSpotAngle: 1
   m_CookieSize: 10
@@ -5873,7 +5873,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -6967,7 +6967,7 @@ Transform:
   - {fileID: 1081326729}
   - {fileID: 2048133119}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1544151635 stripped
 Transform:
@@ -7046,7 +7046,7 @@ Transform:
   - {fileID: 1529318520}
   - {fileID: 507368696}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1581962923 stripped
 GameObject:
@@ -8073,7 +8073,7 @@ RectTransform:
   - {fileID: 689321543}
   - {fileID: 1060977319}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -8355,7 +8355,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6387243299866668798, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_Lightmapping
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6387243299866668798, guid: 704fa38bddc578e44a252412fdee472b, type: 3}
       propertyPath: m_Shadows.m_Type
@@ -8780,8 +8780,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 0.9474255, b: 0.6084906, a: 1}
-  m_Intensity: 6
-  m_Range: 10
+  m_Intensity: 3
+  m_Range: 20
   m_SpotAngle: 120
   m_InnerSpotAngle: 1
   m_CookieSize: 10
@@ -8819,7 +8819,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -10879,7 +10879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5467493319394975703, guid: d330ebbf9c9837e4da6aac48ac5e4a90, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5467493319394975703, guid: d330ebbf9c9837e4da6aac48ac5e4a90, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11276,7 +11276,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6711719494245463855, guid: 8527adf892d6c0e48804363cc2b3a254, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6711719494245463855, guid: 8527adf892d6c0e48804363cc2b3a254, type: 3}
       propertyPath: m_LocalPosition.x
