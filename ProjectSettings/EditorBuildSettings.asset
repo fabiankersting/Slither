@@ -7,7 +7,7 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/Game Day.unity
-    guid: 1c80ef31da709d0489be62bb64d4b36c
+    guid: d0037b67188a97e4c95af7d167a05637
   - enabled: 1
     path: Assets/Scenes/Game Night.unity
     guid: 9f02e29cbacada44db64b82ce3e8d790

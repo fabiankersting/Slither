@@ -12,6 +12,8 @@ TagManager:
   - Key
   - Bed
   - LightSwitch
+  - TV
+  - Generator
   layers:
   - Default
   - TransparentFX
