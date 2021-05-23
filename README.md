@@ -12,3 +12,5 @@
 - Night and Day Scene
 - Bed transitions to night
 - Main Menu
+- Game Manager
+- Triggers
