@@ -3,7 +3,10 @@ using UnityEngine;
 
 public class LightSwitchScript : MonoBehaviour
 {
+    private GameManager gameManager = null;
+
     [SerializeField] private bool lightOn = false;
+    [SerializeField] private int lightID = 0;
     [SerializeField] private List<GameObject> connectedLights = new List<GameObject>();
 
     [SerializeField] private AudioClip switchSound = null;
@@ -23,14 +26,60 @@ public class LightSwitchScript : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (gameManager == null)
+            gameManager = FindObjectOfType<GameManager>();
+
+        if (gameManager != null)
+        { 
+            lightOn = gameManager.GetLightStateFromArray(lightID);
+
+            foreach (var light in connectedLights)
+                light.SetActive(lightOn);
+        }
+    }
+
+    private void Update()
+    {
+        if (gameManager.GetLightsOut() && lightOn)
+        {
+            lightOn = !lightOn;
+
+            foreach (var light in connectedLights)
+                light.SetActive(lightOn);
+        }
+    }
+
     public void ChangeLightState()
     {
-        lightOn = !lightOn;
+        if (gameManager == null)
+        {
+            lightOn = !lightOn;
 
-        foreach(var light in connectedLights)
-            light.SetActive(lightOn);
+            foreach (var light in connectedLights)
+                light.SetActive(lightOn);
 
-        PlaySFX(switchSound);
+            PlaySFX(switchSound);
+        }
+        else
+        {
+            if (gameManager.GetGeneratorOn() && !gameManager.GetLightsOut())
+            {
+                lightOn = !lightOn;
+
+                foreach (var light in connectedLights)
+                    light.SetActive(lightOn);
+
+                gameManager.ChangeLightStateInArray(lightID, lightOn);
+
+                PlaySFX(switchSound);
+            }
+            else
+            {
+                Debug.Log("No power.");
+            }
+        }
     }
 
     private void PlaySFX(AudioClip clip)

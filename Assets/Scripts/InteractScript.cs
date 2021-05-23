@@ -6,7 +6,7 @@ public class InteractScript : MonoBehaviour
     private GameObject lastHitGO = null;
     private GameObject lastHitNote = null;
 
-    void Update()
+    private void Update()
     {
         Ray ray = new Ray(transform.position, transform.forward);
         RaycastHit hit;
@@ -67,9 +67,13 @@ public class InteractScript : MonoBehaviour
                 {
                     hit.collider.transform.parent.GetComponent<LightSwitchScript>().ChangeLightState();
                 }
+                if (hit.collider.CompareTag("Generator"))
+                {
+                    hit.collider.transform.parent.GetComponent<GeneratorScript>().ChangeGeneratorState();
+                }
                 if (hit.collider.CompareTag("TV"))
                 {
-                    hit.collider.transform.GetComponent<TVSript>().ChangeTVState();
+                    hit.collider.transform.parent.GetComponent<TVScript>().ChangeTVState();
                 }
             }
         }

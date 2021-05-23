@@ -3,6 +3,8 @@ using UnityEngine.SceneManagement;
 
 public class BedScript : MonoBehaviour
 {
+    private GameManager gameManager = null;
+
     //[SerializeField] private AudioClip bedSound = null;
 
     AudioSource _source = null;
@@ -20,10 +22,23 @@ public class BedScript : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        if (gameManager == null)
+            gameManager = FindObjectOfType<GameManager>();
+    }
+
     public void ChangeScene()
     {
-        SceneManager.LoadScene(1);
-        //PlaySFX(bedSound);
+        if (gameManager.GetGeneratorOn())
+        {
+            SceneManager.LoadScene(1);
+            //PlaySFX(bedSound);
+        }
+        else
+        {
+            Debug.Log("Need to get the generator running first.");
+        }
     }
 
     private void PlaySFX(AudioClip clip)

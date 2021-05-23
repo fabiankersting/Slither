@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class DoorScript : MonoBehaviour
 {
+    private GameManager gameManager = null;
+
     [SerializeField] private bool doorOpen = false;
     [SerializeField] private bool doorUnlocked = true;
     [SerializeField] private bool openVertically = true;
+    [SerializeField] private int doorID = 0;
     [SerializeField] private float doorOpenAngle = 90f; // -90 to rotate in the other direction
     [SerializeField] private float doorCloseAngle = 0f;
     [SerializeField] private float doorMovementSmooth = 2f;
@@ -24,6 +27,17 @@ public class DoorScript : MonoBehaviour
                 _source.playOnAwake = false;
             }
             return _source;
+        }
+    }
+
+    private void Awake()
+    {
+        if (gameManager == null)
+            gameManager = FindObjectOfType<GameManager>();
+
+        if (gameManager != null)
+        {
+            doorOpen = gameManager.GetDoorStateFromArray(doorID);
         }
     }
 
@@ -62,6 +76,10 @@ public class DoorScript : MonoBehaviour
         if (doorUnlocked)
         {
             doorOpen = !doorOpen;
+
+            if (gameManager != null)
+                gameManager.ChangeDoorStateInArray(doorID, doorOpen);
+
             PlaySFX(doorSound);
         }
         else
