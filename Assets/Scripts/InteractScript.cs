@@ -67,6 +67,10 @@ public class InteractScript : MonoBehaviour
                 {
                     hit.collider.transform.parent.GetComponent<LightSwitchScript>().ChangeLightState();
                 }
+                if (hit.collider.CompareTag("TV"))
+                {
+                    hit.collider.transform.GetComponent<TVSript>().ChangeTVState();
+                }
             }
         }
     }
