@@ -24892,6 +24892,7 @@ GameObject:
   - component: {fileID: 4310704869930055505}
   - component: {fileID: 229619318244220420}
   - component: {fileID: 5997009664904636152}
+  - component: {fileID: 7899829889275778781}
   m_Layer: 0
   m_Name: Cube.004
   m_TagString: Untagged
@@ -24899,6 +24900,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!64 &7899829889275778781
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899829889275778780}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -5053925668127403250, guid: 6476ed1ea3f7b4d498048ab1e8974471, type: 3}
 --- !u!4 &7967766326386867195
 Transform:
   m_ObjectHideFlags: 0
