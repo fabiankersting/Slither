@@ -59,9 +59,11 @@
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\KeepOnSurface.cs" />
     <Compile Include="Assets\Scripts\DoorScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\SpawnInArea.cs" />
+    <Compile Include="Assets\Scripts\SnakeFoodScript.cs" />
     <Compile Include="Assets\Scripts\NoteScript.cs" />
     <Compile Include="Assets\Scripts\LadderScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_CustomWind.cs" />
+    <Compile Include="Assets\Scripts\SnakeFeedingScript.cs" />
     <Compile Include="Assets\Scripts\LaddderScript.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Flashlight.cs" />
@@ -99,7 +101,6 @@
      <None Include="Assets\ShaderSindToll\RainyWindow\RainyWindow.shader" />
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Getting started.txt" />
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\Includes\CTI_BillboardVertex_301.cginc" />
-     <None Include="Assets\ShaderSindToll\ToonShader\ToonShader.shader" />
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\Includes\CTI_TranslucentLighting_301.cginc" />
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_301.shader" />
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Resources\CTI_Internal-DeferredReflections.shader" />
