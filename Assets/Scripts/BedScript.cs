@@ -30,12 +30,17 @@ public class BedScript : MonoBehaviour
 
     public void ChangeScene()
     {
-        if (gameManager.GetGeneratorOn())
+        if (gameManager.GetGeneratorOn() && gameManager.GetSnakeFed())
         {
+            gameManager.SetNightState(true);
             SceneManager.LoadScene(1);
             //PlaySFX(bedSound);
         }
-        else
+        else if (!gameManager.GetSnakeFed())
+        {
+            Debug.Log("Need to feed the snake first.");
+        }
+        else if (!gameManager.GetGeneratorOn())
         {
             Debug.Log("Need to get the generator running first.");
         }

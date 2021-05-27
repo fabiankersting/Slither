@@ -4,8 +4,10 @@ public class GameManager : MonoBehaviour
 {
     //Day Scene
     private bool houseEntered = false;      //Player enters house for the first time, enables snake trigger
-    private bool snakeSeen = false;         //Player has seen the snake for the first time, generator now interactable
-    private bool generatorOn = false;       //Player turned the generator on, lights can be turned on and bed now interactable
+    private bool snakeSeen = false;         //Player has seen the snake for the first time
+    private bool foodPickedUp = false;      //Player has picked up the snake food, snake now feedable
+    private bool snakeFed = false;          //Player has fed the snake
+    private bool generatorOn = false;       //Player turned the generator on, lights can be turned on and bed now interactable if snake fed
     //Night Scene
     private bool snakeChecked = false;      //Player checks if the snake is there, phone rings
     private bool lightsOut = false;         //Player answers the phone, lights go out
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
     private bool[] lightsArray = new bool[8] { false, false, false, false, false, false, false, false };
     private bool[] doorsArray = new bool[24] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
     private bool tvOn = false;
+    private bool night = false;
 
     private void Awake()
     {
@@ -29,6 +32,16 @@ public class GameManager : MonoBehaviour
     public bool GetSnakeSeen()
     {
         return snakeSeen;
+    }
+
+    public bool GetFoodPickedUp()
+    {
+        return foodPickedUp;
+    }
+
+    public bool GetSnakeFed()
+    {
+        return snakeFed;
     }
 
     public bool GetGeneratorOn()
@@ -66,6 +79,16 @@ public class GameManager : MonoBehaviour
         snakeSeen = state;
     }
 
+    public void SetFoodPickedUp(bool state)
+    {
+        foodPickedUp = state;
+    }
+
+    public void SetSnakeFed(bool state)
+    {
+        snakeFed = state;
+    }
+
     public void SetGeneratorOn(bool state)
     {
         generatorOn = state;
@@ -99,6 +122,16 @@ public class GameManager : MonoBehaviour
     public void SetTVState(bool state)
     {
         tvOn = state;
+    }
+
+    public bool GetNightState()
+    {
+        return night;
+    }
+
+    public void SetNightState(bool state)
+    {
+        night = state;
     }
 
     public void ChangeLightStateInArray(int lightId, bool state)

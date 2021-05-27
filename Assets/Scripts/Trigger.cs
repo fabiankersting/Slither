@@ -21,11 +21,11 @@ public class Trigger : MonoBehaviour
         {
             if (nightScene)
             {
-                if (triggerID == 3)
+                if (triggerID == 2)
                     gameManager.SetSnakeChecked(true);
-                else if (triggerID == 4)
+                else if (triggerID == 3)
                     gameManager.SetLightsOut(true);
-                else if (triggerID == 6)
+                else if (triggerID == 4)
                     Debug.Log("Game is over.");
             }
 

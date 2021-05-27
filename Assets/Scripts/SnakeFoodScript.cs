@@ -1,14 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class KeyScript : MonoBehaviour
+public class SnakeFoodScript : MonoBehaviour
 {
     private GameManager gameManager = null;
 
-    [SerializeField] private GameObject doorToUnlock = null;
-    [SerializeField] private GameObject keyModel = null;
+    [SerializeField] private GameObject foodModel = null;
 
-    [SerializeField] private AudioClip keySound = null;
+    [SerializeField] private AudioClip foodSound = null;
 
     AudioSource _source = null;
     AudioSource Source
@@ -31,23 +30,16 @@ public class KeyScript : MonoBehaviour
             gameManager = FindObjectOfType<GameManager>();
     }
 
-    public void SetDoorUnlocked()
+    public void SetSnakeFeedable()
     {
-        if (gameManager.GetGeneratorChecked())
-        {
-            doorToUnlock.GetComponent<DoorScript>().UnlockDoor();
-            PlaySFX(keySound);
-            StartCoroutine(DelayedDeactivate(1));
-        }
-        else
-        {
-            Debug.Log("Don't need this right now.");
-        }
+        gameManager.SetFoodPickedUp(true);
+        PlaySFX(foodSound);
+        StartCoroutine(DelayedDeactivate(1));
     }
 
     private IEnumerator DelayedDeactivate(float duration)
     {
-        keyModel.SetActive(false);
+        foodModel.SetActive(false);
         yield return new WaitForSeconds(duration);
         gameObject.SetActive(false);
     }

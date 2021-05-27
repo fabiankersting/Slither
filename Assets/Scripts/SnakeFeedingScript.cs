@@ -1,14 +1,10 @@
-using System.Collections;
 using UnityEngine;
 
-public class KeyScript : MonoBehaviour
+public class SnakeFeedingScript : MonoBehaviour
 {
     private GameManager gameManager = null;
 
-    [SerializeField] private GameObject doorToUnlock = null;
-    [SerializeField] private GameObject keyModel = null;
-
-    [SerializeField] private AudioClip keySound = null;
+    [SerializeField] private AudioClip feedingSound = null;
 
     AudioSource _source = null;
     AudioSource Source
@@ -31,25 +27,25 @@ public class KeyScript : MonoBehaviour
             gameManager = FindObjectOfType<GameManager>();
     }
 
-    public void SetDoorUnlocked()
+    public void FeedSnake()
     {
-        if (gameManager.GetGeneratorChecked())
+        if (gameManager.GetFoodPickedUp() && !gameManager.GetSnakeFed() && !gameManager.GetNightState())
         {
-            doorToUnlock.GetComponent<DoorScript>().UnlockDoor();
-            PlaySFX(keySound);
-            StartCoroutine(DelayedDeactivate(1));
+            gameManager.SetSnakeFed(true);
+            PlaySFX(feedingSound);
+        }
+        else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && !gameManager.GetNightState())
+        {
+            Debug.Log("The snake has been fed.");
+        }
+        else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && gameManager.GetNightState())
+        {
+            Debug.Log("The snake is gone!");
         }
         else
         {
-            Debug.Log("Don't need this right now.");
+            Debug.Log("It seems to be watching me.");
         }
-    }
-
-    private IEnumerator DelayedDeactivate(float duration)
-    {
-        keyModel.SetActive(false);
-        yield return new WaitForSeconds(duration);
-        gameObject.SetActive(false);
     }
 
     private void PlaySFX(AudioClip clip)

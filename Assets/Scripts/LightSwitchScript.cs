@@ -4,6 +4,8 @@ using UnityEngine;
 public class LightSwitchScript : MonoBehaviour
 {
     private GameManager gameManager = null;
+    private bool lightState = false;
+    private int i = 0;
 
     [SerializeField] private bool lightOn = false;
     [SerializeField] private int lightID = 0;
@@ -44,10 +46,20 @@ public class LightSwitchScript : MonoBehaviour
     {
         if (gameManager.GetLightsOut() && lightOn)
         {
-            lightOn = !lightOn;
+            lightState = !lightState;
 
             foreach (var light in connectedLights)
-                light.SetActive(lightOn);
+                light.SetActive(lightState);
+
+            i++;
+
+            if (i >= 100)
+            { 
+                lightOn = false;
+
+                foreach (var light in connectedLights)
+                    light.SetActive(lightOn);
+            }
         }
     }
 

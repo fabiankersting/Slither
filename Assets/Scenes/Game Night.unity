@@ -1007,7 +1007,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   nightScene: 1
-  triggerID: 3
+  triggerID: 2
 --- !u!65 &109472284
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9964,7 +9964,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   nightScene: 1
-  triggerID: 6
+  triggerID: 4
 --- !u!65 &669789355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12915,7 +12915,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   nightScene: 1
-  triggerID: 4
+  triggerID: 3
 --- !u!65 &1107416279
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20348,7 +20348,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2259107857184302486, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}

@@ -75,6 +75,14 @@ public class InteractScript : MonoBehaviour
                 {
                     hit.collider.transform.parent.GetComponent<TVScript>().ChangeTVState();
                 }
+                if (hit.collider.CompareTag("SnakeFood"))
+                {
+                    hit.collider.transform.parent.GetComponent<SnakeFoodScript>().SetSnakeFeedable();
+                }
+                if (hit.collider.CompareTag("Snake"))
+                {
+                    hit.collider.transform.parent.GetComponent<SnakeFeedingScript>().FeedSnake();
+                }
             }
         }
     }
