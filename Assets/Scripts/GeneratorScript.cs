@@ -1,9 +1,13 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GeneratorScript : MonoBehaviour
 {
     private GameManager gameManager = null;
     private bool generatorOn = false;
+
+    [SerializeField] private GameObject fuelGauge = null;
+    [SerializeField] private List<InteractionTextScript> lightSwitches = new List<InteractionTextScript>();
 
     [SerializeField] private AudioSource generatorSound = null;
 
@@ -26,6 +30,11 @@ public class GeneratorScript : MonoBehaviour
             generatorOn = !generatorOn;
             gameManager.SetGeneratorOn(true);
             generatorSound.enabled = true;
+
+            foreach (var interactText in lightSwitches)
+            {
+                interactText.ChangeAllowDisplayInfo();
+            }
         }
         else if (generatorOn && !gameManager.GetLightsOut())
         {
@@ -46,5 +55,11 @@ public class GeneratorScript : MonoBehaviour
     {
         generatorOn = !generatorOn;
         generatorSound.enabled = false;
+        fuelGauge.transform.rotation = Quaternion.Euler(0, 0, -42);
+
+        foreach (var interactText in lightSwitches)
+        {
+            interactText.ChangeAllowDisplayInfo();
+        }
     }
 }

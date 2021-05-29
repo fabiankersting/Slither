@@ -83,6 +83,11 @@ public class InteractScript : MonoBehaviour
                 {
                     hit.collider.transform.parent.GetComponent<SnakeFeedingScript>().FeedSnake();
                 }
+
+                if (hit.collider.transform.parent.TryGetComponent(out InteractionTextScript text))
+                {
+                    text.ChangeTextState(true);
+                }
             }
         }
     }

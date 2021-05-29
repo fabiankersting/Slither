@@ -10,7 +10,6 @@ public class DisplayText : MonoBehaviour
     [SerializeField] private float fadeTime;
     [SerializeField] private bool displayInfo;
 
-
     private void Start()
     {
         Text[] textObjects = GetComponentsInChildren<Text>();

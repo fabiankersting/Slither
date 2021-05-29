@@ -87,10 +87,6 @@ public class LightSwitchScript : MonoBehaviour
 
                 PlaySFX(switchSound);
             }
-            else
-            {
-                Debug.Log("No power.");
-            }
         }
     }
 
