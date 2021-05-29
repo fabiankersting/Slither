@@ -14,3 +14,4 @@
 - Main Menu
 - Game Manager
 - Triggers
+- Interaction Text for Player Monologue
