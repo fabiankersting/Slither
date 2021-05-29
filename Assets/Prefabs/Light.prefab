@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 802106263079905118}
   - component: {fileID: 802106263079905119}
   - component: {fileID: 802106263079905116}
+  - component: {fileID: 5201968434621513493}
   m_Layer: 0
   m_Name: LightSwitch
   m_TagString: Untagged
@@ -49,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightOn: 1
+  lightID: 0
   connectedLights:
   - {fileID: 3981996290432323517}
   switchSound: {fileID: 8300000, guid: 0f249eddb87c3ff4086b061c7b25e26f, type: 3}
@@ -165,6 +167,23 @@ MonoBehaviour:
   textObjectFront: {fileID: 0}
   textObjectBack: {fileID: 0}
   fadeTime: 3
+  displayInfo: 0
+--- !u!114 &5201968434621513493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802106263079905106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4e4b8fcb393164da5110e2f290a2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: Locked
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  textObject: {fileID: 0}
+  fadeTime: 2
   displayInfo: 0
 --- !u!1 &802106263219380880
 GameObject:

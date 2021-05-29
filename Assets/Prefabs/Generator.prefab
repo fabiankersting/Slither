@@ -1070,6 +1070,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a47044bc7404a3f47ab8e62a8d0b2c9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fuelGauge: {fileID: 628848805928466575}
+  lightSwitches:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   generatorSound: {fileID: 4311064661662465337}
 --- !u!82 &4311064661662465337
 AudioSource:
