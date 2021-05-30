@@ -43,6 +43,7 @@ public class GeneratorScript : MonoBehaviour
         else if (gameManager.GetLightsOut())
         {
             gameManager.SetGeneratorChecked(true);
+            gameManager.SetTvSnake(true);
             Debug.Log("Needs fuel.");
         }
         else

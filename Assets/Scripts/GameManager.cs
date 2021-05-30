@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     private bool snakeChecked = false;      //Player checks if the snake is there, phone rings
     private bool lightsOut = false;         //Player answers the phone, lights go out
     private bool generatorChecked = false;  //Player checks the generator, key spawns in attic
+    private bool tvSnake = false;           //Snake image on Tv after generator check
     private bool cellarEntered = false;     //Player has entered cellar, game ends
 
     private bool[] lightsArray = new bool[8] { false, false, false, false, false, false, false, false };
@@ -19,9 +20,11 @@ public class GameManager : MonoBehaviour
     private bool tvOn = false;
     private bool night = false;
 
+    private TVScript TV;
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
+        TV = GameObject.FindObjectOfType<TVScript>();
     }
 
     public bool GetHouseEntered()
@@ -64,6 +67,18 @@ public class GameManager : MonoBehaviour
         return generatorChecked;
     }
 
+    public void SetTvSnake(bool state)
+    {
+        Debug.Log("settvsnake");
+        tvSnake = state;
+        TV.ChangeTVState();
+        
+    }
+
+    public bool GetTvSnake()
+    {
+        return tvSnake;
+    }
     public bool GetCellarEntered()
     {
         return cellarEntered;
