@@ -4,6 +4,8 @@ public class SnakeFeedingScript : MonoBehaviour
 {
     private GameManager gameManager = null;
 
+    [SerializeField] private GameObject Rat;
+
     [SerializeField] private AudioClip feedingSound = null;
 
     AudioSource _source = null;
@@ -32,6 +34,7 @@ public class SnakeFeedingScript : MonoBehaviour
         if (gameManager.GetFoodPickedUp() && !gameManager.GetSnakeFed() && !gameManager.GetNightState())
         {
             gameManager.SetSnakeFed(true);
+            Rat.SetActive(true);
             PlaySFX(feedingSound);
         }
         else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && !gameManager.GetNightState())
