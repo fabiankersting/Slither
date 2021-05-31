@@ -9247,15 +9247,15 @@ PrefabInstance:
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900003}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 413390561}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteCloseCollider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
 --- !u!4 &559574284 stripped
@@ -10500,15 +10500,15 @@ PrefabInstance:
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900003}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1060977320}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteCloseCollider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
 --- !u!4 &679105197 stripped
@@ -12175,15 +12175,15 @@ PrefabInstance:
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900003}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 467354546}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteCloseCollider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
 --- !u!4 &866434804 stripped
@@ -18128,15 +18128,15 @@ PrefabInstance:
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900003}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteImage
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1092139100}
     - target: {fileID: 2034092676830164252, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: noteCloseCollider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4569999647146900002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
 --- !u!4 &1677843935 stripped
@@ -23096,6 +23096,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ba7f06f520a2fa48b7a75cf9345cfcd, type: 3}
+--- !u!1 &4569999647146900002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1525819028, guid: 9ba7f06f520a2fa48b7a75cf9345cfcd, type: 3}
+  m_PrefabInstance: {fileID: 4569999647146900001}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4569999647146900003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4569999647301294168, guid: 9ba7f06f520a2fa48b7a75cf9345cfcd, type: 3}
+  m_PrefabInstance: {fileID: 4569999647146900001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4571499625259799337
 Transform:
   m_ObjectHideFlags: 0
