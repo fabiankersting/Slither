@@ -1,11 +1,12 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class SnakeFoodScript : MonoBehaviour
 {
     private GameManager gameManager = null;
 
-    [SerializeField] private GameObject foodModel = null;
+    [SerializeField] private List<GameObject> foodModel = null;
 
     [SerializeField] private AudioClip foodSound = null;
 
@@ -39,7 +40,11 @@ public class SnakeFoodScript : MonoBehaviour
 
     private IEnumerator DelayedDeactivate(float duration)
     {
-        foodModel.SetActive(false);
+        foreach (var part in foodModel)
+        {
+            part.SetActive(false);
+        }
+        
         yield return new WaitForSeconds(duration);
         gameObject.SetActive(false);
     }

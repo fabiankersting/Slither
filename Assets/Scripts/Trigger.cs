@@ -27,6 +27,8 @@ public class Trigger : MonoBehaviour
                     gameManager.SetLightsOut(true);
                 else if (triggerID == 4)
                     Debug.Log("Game is over.");
+                else
+                    Debug.Log("No trigger.");
             }
 
             triggerEvent.Invoke();

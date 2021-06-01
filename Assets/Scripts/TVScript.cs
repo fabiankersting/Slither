@@ -29,6 +29,7 @@ public class TVScript : MonoBehaviour
         {
             Debug.Log("No Power.");
         }
+
         if (gameManager.GetTvSnake())
         {
             Debug.Log("snakeimage");

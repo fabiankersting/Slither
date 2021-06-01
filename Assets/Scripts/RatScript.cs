@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class RatScript : MonoBehaviour
 {
-    [SerializeField] DoorScript roomDoor;
-    AudioSource dyingSound;
+    [SerializeField] private DoorScript roomDoor;
+    [SerializeField] private SnakeHead SnakeHead;
 
+    AudioSource dyingSound;
 
     private void RatDies()
     {
         this.gameObject.SetActive(false);
+        SnakeHead.ChangeSnakeFollowPlayer(true);
     }
 
     private void OnTriggerEnter(Collider other)

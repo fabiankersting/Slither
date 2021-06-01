@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     private bool night = false;
 
     private TVScript TV;
+
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
@@ -72,7 +73,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("settvsnake");
         tvSnake = state;
         TV.ChangeTVState();
-        
     }
 
     public bool GetTvSnake()
