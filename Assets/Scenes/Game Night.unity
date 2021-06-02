@@ -5603,6 +5603,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 836256681}
     m_Modifications:
+    - target: {fileID: 2034092676225017440, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4587161807e0a2d469221d19d07369e6, type: 2}
     - target: {fileID: 2034092676830164249, guid: 2f63c719eaa64174cad1e51cbbbbd36a, type: 3}
       propertyPath: m_Name
       value: Note Flashlight
