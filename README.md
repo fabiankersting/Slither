@@ -15,3 +15,4 @@
 - Game Manager
 - Triggers
 - Interaction Text for Player Monologue
+- Footstep Sounds
