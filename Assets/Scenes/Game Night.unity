@@ -113407,12 +113407,20 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8388909789904381666, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3685
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388909789904381666, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6781018
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388909789904381666, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.6958103
       objectReference: {fileID: 0}
     - target: {fileID: 8388909789904381666, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.386799
+      value: 23.557
       objectReference: {fileID: 0}
     - target: {fileID: 8388909789904381666, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -113444,6 +113452,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8388909789904381666, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8388909789904381667, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
+      propertyPath: videoPlane
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9094823552760693591, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
