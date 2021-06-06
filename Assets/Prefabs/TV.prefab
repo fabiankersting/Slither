@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8388909789904381666}
   - component: {fileID: 8388909789904381667}
   - component: {fileID: 8388909789904381692}
+  - component: {fileID: 8388909788438903662}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8388909789904381665}
-  m_LocalRotation: {x: -0.0029448254, y: -0.70710075, z: -0.70710063, w: 0.0029448231}
+  m_LocalRotation: {x: -0.0029434264, y: -0.7071007, z: -0.7071007, w: 0.0029434264}
   m_LocalPosition: {x: -4.6958103, y: 23.386799, z: -120.05452}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_Children:
@@ -34,7 +35,7 @@ Transform:
   - {fileID: 6670115606775061159}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -179.523}
 --- !u!114 &8388909789904381667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,6 +67,24 @@ MonoBehaviour:
   textObjectBack: {fileID: 0}
   fadeTime: 3
   displayInfo: 0
+--- !u!114 &8388909788438903662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8388909789904381665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4e4b8fcb393164da5110e2f290a2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: No Power
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  textObject: {fileID: 0}
+  fadeTime: 2
+  displayInfo: 0
+  allowDisplayInfo: 0
 --- !u!1 &8694776118126349020
 GameObject:
   m_ObjectHideFlags: 0
