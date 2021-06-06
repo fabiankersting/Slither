@@ -5,6 +5,7 @@ public class SnakeFeedingScript : MonoBehaviour
     private GameManager gameManager = null;
 
     [SerializeField] private SnakeHead SnakeHead;
+    [SerializeField] private GameObject Bed = null;
     [SerializeField] private GameObject Rat;
 
     [SerializeField] private AudioClip feedingSound = null;
@@ -39,17 +40,31 @@ public class SnakeFeedingScript : MonoBehaviour
             SnakeHead.ChangeSnakeFollowPlayer(false);
             PlaySFX(feedingSound);
         }
-        else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && !gameManager.GetNightState())
+        else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && !gameManager.GetNightState() && !gameManager.GetGeneratorOn())
         {
-            Debug.Log("The snake has been fed.");
+            if (!Bed.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                Bed.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+
+            Bed.GetComponent<InteractionTextScript>().ChangeInteractionText("Should get the generator running");
+
+            if(!GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+
+            GetComponent<InteractionTextScript>().ChangeInteractionText("The snake has been fed");
+        }
+        else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && !gameManager.GetNightState() && gameManager.GetGeneratorOn())
+        {
+            if (Bed.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                Bed.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+
+            if (!GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+
+            GetComponent<InteractionTextScript>().ChangeInteractionText("The snake has been fed");
         }
         else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && gameManager.GetNightState())
         {
-            Debug.Log("The snake is gone!");
-        }
-        else
-        {
-            Debug.Log("It seems to be watching me.");
+            GetComponent<InteractionTextScript>().ChangeInteractionText("The snake is gone!");
         }
     }
 

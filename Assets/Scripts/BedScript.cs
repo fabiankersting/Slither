@@ -36,14 +36,6 @@ public class BedScript : MonoBehaviour
             SceneManager.LoadScene(1);
             //PlaySFX(bedSound);
         }
-        else if (!gameManager.GetSnakeFed())
-        {
-            Debug.Log("Need to feed the snake first.");
-        }
-        else if (!gameManager.GetGeneratorOn())
-        {
-            Debug.Log("Need to get the generator running first.");
-        }
     }
 
     private void PlaySFX(AudioClip clip)

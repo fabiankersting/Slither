@@ -7,6 +7,7 @@ public class GeneratorScript : MonoBehaviour
     private bool generatorOn = false;
 
     [SerializeField] private GameObject fuelGauge = null;
+    [SerializeField] private GameObject key = null;
     [SerializeField] private List<InteractionTextScript> lightSwitches = new List<InteractionTextScript>();
 
     [SerializeField] private AudioSource generatorSound = null;
@@ -30,25 +31,20 @@ public class GeneratorScript : MonoBehaviour
             generatorOn = !generatorOn;
             gameManager.SetGeneratorOn(true);
             generatorSound.enabled = true;
+            GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
 
             foreach (var interactText in lightSwitches)
             {
                 interactText.ChangeAllowDisplayInfo();
             }
         }
-        else if (generatorOn && !gameManager.GetLightsOut())
-        {
-            Debug.Log("The generator is running.");
-        }
         else if (gameManager.GetLightsOut())
         {
             gameManager.SetGeneratorChecked(true);
             gameManager.SetTvSnake(true);
-            Debug.Log("Needs fuel.");
-        }
-        else
-        {
-            Debug.Log("A generator.");
+
+            if(key.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                key.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
         }
     }
 

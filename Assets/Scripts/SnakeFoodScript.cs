@@ -6,6 +6,7 @@ public class SnakeFoodScript : MonoBehaviour
 {
     private GameManager gameManager = null;
 
+    [SerializeField] private GameObject snake = null;
     [SerializeField] private List<GameObject> foodModel = null;
 
     [SerializeField] private AudioClip foodSound = null;
@@ -34,6 +35,7 @@ public class SnakeFoodScript : MonoBehaviour
     public void SetSnakeFeedable()
     {
         gameManager.SetFoodPickedUp(true);
+        snake.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
         PlaySFX(foodSound);
         StartCoroutine(DelayedDeactivate(1));
     }

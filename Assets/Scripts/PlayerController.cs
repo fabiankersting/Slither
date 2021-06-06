@@ -9,14 +9,28 @@ public class PlayerController : MonoBehaviour
     [SerializeField][Range(0.0f, 0.5f)] private float moveSmoothTime = 0.3f;
     [SerializeField][Range(0.0f, 0.5f)] private float mouseSmoothTime = 0.03f;
     [SerializeField] private bool lockCursor = true;
+    [SerializeField] private AudioClip footstepsGrass = null;
+    [SerializeField] private AudioClip footstepsWood = null;
 
+    private GameManager gameManager = null;
     private CharacterController Controller = null;
+    private AudioSource audioSource;
     private Vector2 currentDir = Vector2.zero;
     private Vector2 currentDirVelocity = Vector2.zero;
     private Vector2 currentMouseDelta = Vector2.zero;
     private Vector2 currentMouseDeltaVelocity = Vector2.zero;
     private float cameraPitch = 0.0f;
     private float velocityY = 0.0f;
+    private bool onGrass = true;
+    private bool changedFootstepSoundOnSceneChange = false;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+
+        if (gameManager == null)
+            gameManager = FindObjectOfType<GameManager>();
+    }
 
     private void Start()
     {
@@ -33,6 +47,8 @@ public class PlayerController : MonoBehaviour
     {
         UpdateMouseLook();
         UpdateMovement();
+
+        ChangeFootstepSoundOnce();
     }
 
     private void UpdateMouseLook()
@@ -63,7 +79,33 @@ public class PlayerController : MonoBehaviour
 
         Vector3 velocity = (transform.forward * currentDir.y + transform.right * currentDir.x) * walkSpeed + Vector3.up * velocityY;
 
-        if(Controller.enabled == true)
+        if (Controller.enabled == true)
             Controller.Move(velocity * Time.deltaTime);
+
+        PlayFootstepSound();
+    }
+
+    private void PlayFootstepSound()
+    {
+        AudioClip clip;
+
+        if (onGrass)
+            clip = footstepsGrass;
+        else
+            clip = footstepsWood;
+
+        if (Controller.velocity.magnitude > 1f && !audioSource.isPlaying)
+            audioSource.PlayOneShot(clip);
+    }
+
+    private void ChangeFootstepSoundOnce()
+    {
+        if (gameManager.GetNightState() && !changedFootstepSoundOnSceneChange)
+            onGrass = false;
+    }
+
+    public void ChangeFootstepSound()
+    {
+        onGrass = !onGrass;
     }
 }

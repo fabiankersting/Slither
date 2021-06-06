@@ -36,12 +36,9 @@ public class KeyScript : MonoBehaviour
         if (gameManager.GetGeneratorChecked())
         {
             doorToUnlock.GetComponent<DoorScript>().UnlockDoor();
+            doorToUnlock.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
             PlaySFX(keySound);
             StartCoroutine(DelayedDeactivate(1));
-        }
-        else
-        {
-            Debug.Log("Don't need this right now.");
         }
     }
 

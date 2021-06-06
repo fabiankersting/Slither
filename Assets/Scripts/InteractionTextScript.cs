@@ -38,6 +38,11 @@ public class InteractionTextScript : MonoBehaviour
         allowDisplayInfo = !allowDisplayInfo;
     }
 
+    public bool GetAllowDisplayInfo()
+    {
+        return allowDisplayInfo;
+    }
+
     private void FadeText()
     {
         if (!allowDisplayInfo)

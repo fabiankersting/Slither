@@ -25,11 +25,6 @@ public class TVScript : MonoBehaviour
             staticImage.gameObject.SetActive(!staticImage.gameObject.activeSelf);
             gameManager.SetTVState(staticImage.gameObject.activeSelf);
         }
-        else
-        {
-            Debug.Log("No Power.");
-        }
-
         if (gameManager.GetTvSnake())
         {
             Debug.Log("snakeimage");
