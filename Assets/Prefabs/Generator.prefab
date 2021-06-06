@@ -187,13 +187,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628848805928466575}
-  m_LocalRotation: {x: 0.26684034, y: -0.6548254, z: -0.2668404, w: 0.65482527}
+  m_LocalRotation: {x: 0.1106159, y: -0.69840115, z: -0.1106159, w: 0.69840115}
   m_LocalPosition: {x: -0.9465854, y: 0.95683295, z: -0.4655339}
   m_LocalScale: {x: 0.01706205, y: 0.01706205, z: 0.0037391705}
   m_Children: []
   m_Father: {fileID: 3501595802861643649}
   m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: -18}
 --- !u!33 &6817597382300559453
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -985,6 +985,7 @@ GameObject:
   - component: {fileID: 4311064661662465338}
   - component: {fileID: 4311064661662465336}
   - component: {fileID: 4311064661662465337}
+  - component: {fileID: 3968396579754574289}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Untagged
@@ -1177,6 +1178,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3968396579754574289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4311064661662465339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf4e4b8fcb393164da5110e2f290a2f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionText: The generator is running
+  textColor: {r: 1, g: 1, b: 1, a: 1}
+  textObject: {fileID: 0}
+  fadeTime: 2
+  displayInfo: 0
+  allowDisplayInfo: 0
 --- !u!1 &4368192734120276494
 GameObject:
   m_ObjectHideFlags: 0
