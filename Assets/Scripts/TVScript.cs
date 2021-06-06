@@ -3,6 +3,7 @@ using UnityEngine;
 public class TVScript : MonoBehaviour
 {
     private GameManager gameManager = null;
+    [SerializeField] private GameObject videoPlane;
 
     [SerializeField] private GameObject staticImage;
 
@@ -15,20 +16,24 @@ public class TVScript : MonoBehaviour
         {
             staticImage.gameObject.SetActive(gameManager.GetTVState());
         }
+        videoPlane = GameObject.FindGameObjectWithTag("VideoPlane");
+        videoPlane.SetActive(false);
+       
     }
 
     //switches between a static noise image and turned off
     public void ChangeTVState()
     {
-        if (gameManager.GetGeneratorOn() && !gameManager.GetLightsOut())
+        if (gameManager.GetTvSnake())
+        {
+            videoPlane.SetActive(true);
+        }
+        else if (gameManager.GetGeneratorOn() && !gameManager.GetLightsOut())
         {
             staticImage.gameObject.SetActive(!staticImage.gameObject.activeSelf);
             gameManager.SetTVState(staticImage.gameObject.activeSelf);
         }
-        if (gameManager.GetTvSnake())
-        {
-            Debug.Log("snakeimage");
-        }
+       
     }
 
  

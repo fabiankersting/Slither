@@ -6,6 +6,8 @@ public class GeneratorScript : MonoBehaviour
     private GameManager gameManager = null;
     private bool generatorOn = false;
 
+    private TVScript TV;
+
     [SerializeField] private GameObject fuelGauge = null;
     [SerializeField] private GameObject key = null;
     [SerializeField] private List<InteractionTextScript> lightSwitches = new List<InteractionTextScript>();
@@ -22,6 +24,7 @@ public class GeneratorScript : MonoBehaviour
             generatorOn = gameManager.GetGeneratorOn();
             generatorSound.enabled = gameManager.GetGeneratorOn();
         }
+        TV = GameObject.FindObjectOfType<TVScript>();
     }
 
     public void ChangeGeneratorState()
@@ -42,8 +45,8 @@ public class GeneratorScript : MonoBehaviour
         {
             gameManager.SetGeneratorChecked(true);
             gameManager.SetTvSnake(true);
-
-            if(key.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+            TV.ChangeTVState();
+            if (key.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
                 key.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
         }
     }

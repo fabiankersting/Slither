@@ -20,12 +20,11 @@ public class GameManager : MonoBehaviour
     private bool tvOn = false;
     private bool night = false;
 
-    private TVScript TV;
+
 
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
-        TV = GameObject.FindObjectOfType<TVScript>();
     }
 
     public bool GetHouseEntered()
@@ -70,9 +69,7 @@ public class GameManager : MonoBehaviour
 
     public void SetTvSnake(bool state)
     {
-        Debug.Log("settvsnake");
         tvSnake = state;
-        TV.ChangeTVState();
     }
 
     public bool GetTvSnake()
