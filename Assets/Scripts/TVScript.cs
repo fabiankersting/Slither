@@ -4,6 +4,7 @@ public class TVScript : MonoBehaviour
 {
     private GameManager gameManager = null;
     [SerializeField] private GameObject videoPlane;
+    [SerializeField] private GameObject ladderRope;
 
     [SerializeField] private GameObject staticImage;
 
@@ -27,6 +28,8 @@ public class TVScript : MonoBehaviour
         if (gameManager.GetTvSnake())
         {
             videoPlane.SetActive(true);
+            ladderRope.SetActive(true);
+
         }
         else if (gameManager.GetGeneratorOn() && !gameManager.GetLightsOut())
         {
