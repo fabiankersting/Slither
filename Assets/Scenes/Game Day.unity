@@ -26868,6 +26868,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1538951447}
     m_Modifications:
+    - target: {fileID: 343053681, guid: d341a9f8d8bb1bd4686fc716372b53fe, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bb775703c9bdfc742ac2253b1a2efcdb, type: 3}
     - target: {fileID: 3818964519696658939, guid: d341a9f8d8bb1bd4686fc716372b53fe, type: 3}
       propertyPath: m_Name
       value: TerrariumWithSnake
