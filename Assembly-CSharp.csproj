@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\DoorScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\SpawnInArea.cs" />
     <Compile Include="Assets\Scripts\SnakeFoodScript.cs" />
+    <Compile Include="Assets\Scripts\TeddyScript.cs" />
     <Compile Include="Assets\Scripts\NoteScript.cs" />
     <Compile Include="Assets\Scripts\LadderScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_CustomWind.cs" />
@@ -72,13 +73,16 @@
     <Compile Include="Assets\Scripts\RatScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\2DTools\Scripts\CircleMoverSample.cs" />
     <Compile Include="Assets\Scripts\MainMenuScript.cs" />
+    <Compile Include="Assets\Scripts\SnakeSoundTrigger.cs" />
     <Compile Include="Assets\Scripts\SnakeRattle.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Example Data\Scripts\PlayerHoverController.cs" />
     <Compile Include="Assets\Scripts\InteractionTextScript.cs" />
+    <Compile Include="Assets\Scripts\PhoneScript.cs" />
     <Compile Include="Assets\Scripts\DisplayText.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\PlaceOnSurfaceAtStart.cs" />
     <Compile Include="Assets\Scripts\BlitzSpawnScript.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Scripts\CTI_Utils.cs" />
+    <Compile Include="Assets\Scripts\ratWalk.cs" />
     <Compile Include="Assets\Scripts\Trigger.cs" />
     <Compile Include="Assets\Scripts\InteractScript.cs" />
     <Compile Include="Assets\Scripts\TVScript.cs" />
@@ -90,9 +94,9 @@
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\2DTools\Scripts\Camera2DFollow.cs" />
     <Compile Include="Assets\Scripts\GeneratorScript.cs" />
     <Compile Include="Assets\Scripts\LightSwitchScript.cs" />
+    <Compile Include="Assets\Scripts\GameEnd.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\TerrainQualitySettings.cs" />
     <Compile Include="Assets\OutsideSceneTools+Textures\Tom&apos;s Terrain Tools\Scripts\TreeExplosion.cs" />
-    <Compile Include="Assets\Scripts\PhoneScript.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\OutsideSceneTools+Textures\Conifers [BOTD]\Render Pipeline Support\Built-in RP\CTI Runtime Components\Shaders\CTI_LOD_Bark_Array_301.shader" />
