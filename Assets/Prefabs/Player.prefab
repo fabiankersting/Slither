@@ -453,6 +453,7 @@ MonoBehaviour:
   lockCursor: 1
   footstepsGrass: {fileID: 8300000, guid: 8f8f20643aad2da4c883b720b389accc, type: 3}
   footstepsWood: {fileID: 8300000, guid: 11209151010e67b40ba244a8a6285867, type: 3}
+  flashlight: {fileID: 4569999646295492178}
 --- !u!82 &1510176934579217934
 AudioSource:
   m_ObjectHideFlags: 0
@@ -465,13 +466,13 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
