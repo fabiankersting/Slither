@@ -261,4 +261,9 @@ public class Flashlight : MonoBehaviour
             camera = Camera.main;
         }
     }
+
+    public void ActiveFlashlight()
+    {
+        ToggleFlashlight(!usingFlashlight, true);
+    }
 }

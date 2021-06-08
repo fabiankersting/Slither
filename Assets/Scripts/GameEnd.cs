@@ -1,32 +1,37 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameEnd : MonoBehaviour
 {
     [SerializeField] private DoorScript ceilingDoor;
+    [SerializeField] private CharacterController controller;
+
     private GameObject flashLight;
-    AudioSource rattleSound;
+    private AudioSource rattleSound;
 
     private void Awake()
     {
-        rattleSound = this.GetComponent<AudioSource>();
+        rattleSound = GetComponent<AudioSource>();
         flashLight = GameObject.FindGameObjectWithTag("Flashlight");
     }
 
-    IEnumerator waitForSound()
+    IEnumerator waitForSound(int duration)
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(duration);
 
+        SceneManager.LoadScene(2);
     }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.name.Equals("Player"))
         {
             ceilingDoor.ChangeDoorState();
             flashLight.SetActive(false);
-            StartCoroutine(waitForSound());
+            controller.enabled = false;
             rattleSound.Play();
+            StartCoroutine(waitForSound(5));
         }
     }
 }

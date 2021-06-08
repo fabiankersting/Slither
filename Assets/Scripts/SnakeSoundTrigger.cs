@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class GardenhouseTrigger : MonoBehaviour
+public class SnakeSoundTrigger : MonoBehaviour
 {
 
     AudioSource audioSource;

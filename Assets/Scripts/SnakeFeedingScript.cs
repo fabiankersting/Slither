@@ -5,6 +5,7 @@ public class SnakeFeedingScript : MonoBehaviour
     private GameManager gameManager = null;
 
     [SerializeField] private SnakeHead SnakeHead;
+    [SerializeField] private GameObject Player = null;
     [SerializeField] private GameObject Bed = null;
     [SerializeField] private GameObject Rat;
 
@@ -38,29 +39,29 @@ public class SnakeFeedingScript : MonoBehaviour
             gameManager.SetSnakeFed(true);
             Rat.SetActive(true);
             SnakeHead.ChangeSnakeFollowPlayer(false);
-            PlaySFX(feedingSound);
-        }
-        else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && !gameManager.GetNightState() && !gameManager.GetGeneratorOn())
-        {
-            if (!Bed.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
-                Bed.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
-
-            Bed.GetComponent<InteractionTextScript>().ChangeInteractionText("Should get the generator running");
-
-            if(!GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
-                GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
-
-            GetComponent<InteractionTextScript>().ChangeInteractionText("The snake has been fed");
-        }
-        else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && !gameManager.GetNightState() && gameManager.GetGeneratorOn())
-        {
-            if (Bed.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
-                Bed.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
 
             if (!GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
                 GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
 
             GetComponent<InteractionTextScript>().ChangeInteractionText("The snake has been fed");
+
+            if (!gameManager.GetGeneratorOn())
+            {
+                if (!Bed.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                    Bed.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+
+                Bed.GetComponent<InteractionTextScript>().ChangeInteractionText("Should get the generator running");
+
+            }
+            else
+            {
+                if (Bed.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                    Bed.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+
+                Player.GetComponent<InteractionTextScript>().ChangeTextState(true);
+            }
+
+            PlaySFX(feedingSound);
         }
         else if (gameManager.GetFoodPickedUp() && gameManager.GetSnakeFed() && gameManager.GetNightState())
         {

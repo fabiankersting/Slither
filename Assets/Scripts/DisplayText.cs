@@ -39,6 +39,12 @@ public class DisplayText : MonoBehaviour
         displayInfo = changeState;
     }
 
+    public void DisableTextObjects()
+    {
+        textObjectBack.gameObject.SetActive(false);
+        textObjectFront.gameObject.SetActive(false);
+    }
+
     private void FadeText()
     {
         if (displayInfo)

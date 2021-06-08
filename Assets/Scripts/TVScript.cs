@@ -3,10 +3,12 @@ using UnityEngine;
 public class TVScript : MonoBehaviour
 {
     private GameManager gameManager = null;
-    [SerializeField] private GameObject videoPlane;
-    [SerializeField] private GameObject ladderRope;
+    private GameObject videoPlane;
+    private AudioSource videoPlaneAudioSource;
 
+    [SerializeField] private GameObject ladderRope;
     [SerializeField] private GameObject staticImage;
+    [SerializeField] private GameObject TVSoundTrigger;
 
     private void Awake()
     {
@@ -17,9 +19,10 @@ public class TVScript : MonoBehaviour
         {
             staticImage.gameObject.SetActive(gameManager.GetTVState());
         }
+
         videoPlane = GameObject.FindGameObjectWithTag("VideoPlane");
+        videoPlaneAudioSource = videoPlane.GetComponent<AudioSource>();
         videoPlane.SetActive(false);
-       
     }
 
     //switches between a static noise image and turned off
@@ -29,7 +32,7 @@ public class TVScript : MonoBehaviour
         {
             videoPlane.SetActive(true);
             ladderRope.SetActive(true);
-
+            TVSoundTrigger.SetActive(true);
         }
         else if (gameManager.GetGeneratorOn() && !gameManager.GetLightsOut())
         {
@@ -39,5 +42,8 @@ public class TVScript : MonoBehaviour
        
     }
 
- 
+    public void ChangeSoundState()
+    {
+        videoPlaneAudioSource.enabled = !videoPlaneAudioSource.enabled;
+    }
 }

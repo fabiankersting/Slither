@@ -20,8 +20,6 @@ public class GameManager : MonoBehaviour
     private bool tvOn = false;
     private bool night = false;
 
-
-
     private void Awake()
     {
         DontDestroyOnLoad(transform.gameObject);
@@ -67,15 +65,6 @@ public class GameManager : MonoBehaviour
         return generatorChecked;
     }
 
-    public void SetTvSnake(bool state)
-    {
-        tvSnake = state;
-    }
-
-    public bool GetTvSnake()
-    {
-        return tvSnake;
-    }
     public bool GetCellarEntered()
     {
         return cellarEntered;
@@ -126,6 +115,16 @@ public class GameManager : MonoBehaviour
         cellarEntered = state;
     }
 
+    public void SetTvSnake(bool state)
+    {
+        tvSnake = state;
+    }
+
+    public bool GetTvSnake()
+    {
+        return tvSnake;
+    }
+
     public bool GetTVState()
     {
         return tvOn;
@@ -164,5 +163,31 @@ public class GameManager : MonoBehaviour
     public bool GetDoorStateFromArray(int doorId)
     {
         return doorsArray[doorId];
+    }
+
+    public void ResetScene()
+    {
+        for (int i = 0; i < lightsArray.Length; i++)
+        {
+            lightsArray[i] = false;
+        }
+
+        for (int i = 0; i < doorsArray.Length; i++)
+        {
+            doorsArray[i] = false;
+        }
+
+        SetHouseEntered(false);
+        SetSetSnakeSeen(false);
+        SetFoodPickedUp(false);
+        SetSnakeFed(false);
+        SetGeneratorOn(false);
+        SetSnakeChecked(false);
+        SetLightsOut(false);
+        SetGeneratorChecked(false);
+        SetCellarEntered(false);
+        SetTvSnake(false);
+        SetTVState(false);
+        SetNightState(false);
     }
 }

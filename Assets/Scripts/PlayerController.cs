@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool lockCursor = true;
     [SerializeField] private AudioClip footstepsGrass = null;
     [SerializeField] private AudioClip footstepsWood = null;
+    [SerializeField] private Flashlight flashlight = null;
 
     private GameManager gameManager = null;
     private CharacterController Controller = null;
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private float velocityY = 0.0f;
     private bool onGrass = true;
     private bool changedFootstepSoundOnSceneChange = false;
+    private bool delay = true;
 
     private void Awake()
     {
@@ -45,6 +48,13 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        if (gameManager.GetNightState() && delay)
+        {
+            delay = false;
+            Controller.enabled = false;
+            StartCoroutine(DelayedActivate(2));
+        }
+
         UpdateMouseLook();
         UpdateMovement();
 
@@ -102,6 +112,14 @@ public class PlayerController : MonoBehaviour
     {
         if (gameManager.GetNightState() && !changedFootstepSoundOnSceneChange)
             onGrass = false;
+    }
+
+    private IEnumerator DelayedActivate(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        Controller.enabled = true;
+        flashlight.ActiveFlashlight();
     }
 
     public void ChangeFootstepSound()

@@ -8,6 +8,7 @@ public class GeneratorScript : MonoBehaviour
 
     private TVScript TV;
 
+    [SerializeField] private GameObject player = null;
     [SerializeField] private GameObject fuelGauge = null;
     [SerializeField] private GameObject key = null;
     [SerializeField] private List<InteractionTextScript> lightSwitches = new List<InteractionTextScript>();
@@ -24,7 +25,8 @@ public class GeneratorScript : MonoBehaviour
             generatorOn = gameManager.GetGeneratorOn();
             generatorSound.enabled = gameManager.GetGeneratorOn();
         }
-        TV = GameObject.FindObjectOfType<TVScript>();
+
+        TV = FindObjectOfType<TVScript>();
     }
 
     public void ChangeGeneratorState()
@@ -34,18 +36,25 @@ public class GeneratorScript : MonoBehaviour
             generatorOn = !generatorOn;
             gameManager.SetGeneratorOn(true);
             generatorSound.enabled = true;
-            GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+
+            if(gameManager.GetSnakeFed())
+                player.GetComponent<InteractionTextScript>().ChangeTextState(true);
 
             foreach (var interactText in lightSwitches)
             {
                 interactText.ChangeAllowDisplayInfo();
             }
+
+            if (!GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
+                GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
         }
         else if (gameManager.GetLightsOut())
         {
             gameManager.SetGeneratorChecked(true);
             gameManager.SetTvSnake(true);
             TV.ChangeTVState();
+            TV.GetComponent<InteractionTextScript>().ChangeInteractionText("Won't turn off");
+
             if (key.GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
                 key.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
         }

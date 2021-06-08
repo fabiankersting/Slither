@@ -5,6 +5,7 @@ using UnityEngine;
 public class SnakeFoodScript : MonoBehaviour
 {
     private GameManager gameManager = null;
+    private bool used = false;
 
     [SerializeField] private GameObject snake = null;
     [SerializeField] private List<GameObject> foodModel = null;
@@ -34,10 +35,14 @@ public class SnakeFoodScript : MonoBehaviour
 
     public void SetSnakeFeedable()
     {
-        gameManager.SetFoodPickedUp(true);
-        snake.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
-        PlaySFX(foodSound);
-        StartCoroutine(DelayedDeactivate(1));
+        if(!used)
+        {
+            gameManager.SetFoodPickedUp(true);
+            snake.GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
+            used = true;
+            PlaySFX(foodSound);
+            StartCoroutine(DelayedDeactivate(1));
+        }
     }
 
     private IEnumerator DelayedDeactivate(float duration)
@@ -46,9 +51,11 @@ public class SnakeFoodScript : MonoBehaviour
         {
             part.SetActive(false);
         }
+
+        GetComponent<DisplayText>().DisableTextObjects(); //New
         
         yield return new WaitForSeconds(duration);
-        gameObject.SetActive(false);
+        //gameObject.SetActive(false); //Old
     }
 
     private void PlaySFX(AudioClip clip)

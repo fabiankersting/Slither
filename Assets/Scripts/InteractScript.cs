@@ -38,6 +38,12 @@ public class InteractScript : MonoBehaviour
         {
             if (Physics.Raycast(ray, out hit, interactDistance))
             {
+                if (hit.collider.transform.parent.TryGetComponent(out InteractionTextScript text))
+                {
+                    if (text.GetAllowDisplayInfo())
+                        text.ChangeTextState(true);
+                }
+
                 if (hit.collider.CompareTag("Door")) //Door Mesh has to have the tag, because it has the collider
                 {
                     hit.collider.transform.parent.GetComponent<DoorScript>().ChangeDoorState();
@@ -82,11 +88,6 @@ public class InteractScript : MonoBehaviour
                 if (hit.collider.CompareTag("Snake"))
                 {
                     hit.collider.transform.parent.GetComponent<SnakeFeedingScript>().FeedSnake();
-                }
-
-                if (hit.collider.transform.parent.TryGetComponent(out InteractionTextScript text))
-                {
-                    text.ChangeTextState(true);
                 }
             }
         }

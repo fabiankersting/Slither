@@ -19,19 +19,17 @@ public class Trigger : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
+            triggerEvent.Invoke();
+
             if (nightScene)
             {
                 if (triggerID == 2)
                     gameManager.SetSnakeChecked(true);
                 else if (triggerID == 3)
                     gameManager.SetLightsOut(true);
-                else if (triggerID == 4)
-                    Debug.Log("Game is over.");
                 else
                     Debug.Log("No trigger.");
             }
-
-            triggerEvent.Invoke();
         }
     }
 }

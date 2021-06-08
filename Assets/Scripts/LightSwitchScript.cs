@@ -90,6 +90,14 @@ public class LightSwitchScript : MonoBehaviour
         }
     }
 
+    public void ChangeLightStateForTrigger()
+    {
+        lightOn = true;
+
+        foreach (var light in connectedLights)
+            light.SetActive(lightOn);
+    }
+
     private void PlaySFX(AudioClip clip)
     {
         if (clip == null) { return; }
