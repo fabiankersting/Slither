@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     private bool tvSnake = false;           //Snake image on Tv after generator check
     private bool cellarEntered = false;     //Player has entered cellar, game ends
 
-    private bool[] lightsArray = new bool[8] { false, false, false, false, false, false, false, false };
+    private bool[] lightsArray = new bool[9] { false, false, false, false, false, false, false, false, false };
     private bool[] doorsArray = new bool[24] { false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false };
     private bool tvOn = false;
     private bool night = false;

@@ -96,6 +96,8 @@ public class LightSwitchScript : MonoBehaviour
 
         foreach (var light in connectedLights)
             light.SetActive(lightOn);
+
+        gameManager.ChangeLightStateInArray(lightID, lightOn);
     }
 
     private void PlaySFX(AudioClip clip)

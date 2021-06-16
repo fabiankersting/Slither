@@ -11,6 +11,7 @@ public class GeneratorScript : MonoBehaviour
     [SerializeField] private GameObject player = null;
     [SerializeField] private GameObject fuelGauge = null;
     [SerializeField] private GameObject key = null;
+    [SerializeField] private GameObject phoneLight = null;
     [SerializeField] private List<InteractionTextScript> lightSwitches = new List<InteractionTextScript>();
 
     [SerializeField] private AudioSource generatorSound = null;
@@ -44,6 +45,8 @@ public class GeneratorScript : MonoBehaviour
             {
                 interactText.ChangeAllowDisplayInfo();
             }
+
+            phoneLight.GetComponent<LightSwitchScript>().ChangeLightStateForTrigger();
 
             if (!GetComponent<InteractionTextScript>().GetAllowDisplayInfo())
                 GetComponent<InteractionTextScript>().ChangeAllowDisplayInfo();
