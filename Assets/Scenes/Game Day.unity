@@ -26923,6 +26923,10 @@ PrefabInstance:
       propertyPath: lightSwitches.Array.data[8]
       value: 
       objectReference: {fileID: 2117844088}
+    - target: {fileID: 4311064661662465337, guid: d9bb75314f6cf0643908500a468002a2, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 231624878a5e7ad4dbb8989c76e1f66f, type: 3}
     - target: {fileID: 4311064661662465339, guid: d9bb75314f6cf0643908500a468002a2, type: 3}
       propertyPath: m_Name
       value: Generator
