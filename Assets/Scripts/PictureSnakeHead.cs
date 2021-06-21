@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PictureSnakeHead : MonoBehaviour
@@ -8,7 +6,6 @@ public class PictureSnakeHead : MonoBehaviour
     [SerializeField] private GameObject picture;
     [SerializeField] private GameObject end;
     [SerializeField] private GameObject start;
-    bool isInTrigger = false;
 
     private float range;
 

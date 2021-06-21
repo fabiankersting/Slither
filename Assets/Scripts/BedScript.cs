@@ -33,7 +33,7 @@ public class BedScript : MonoBehaviour
         if (gameManager.GetGeneratorOn() && gameManager.GetSnakeFed())
         {
             gameManager.SetNightState(true);
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
             //PlaySFX(bedSound);
         }
     }

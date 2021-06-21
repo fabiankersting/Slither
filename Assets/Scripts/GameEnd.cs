@@ -6,6 +6,7 @@ public class GameEnd : MonoBehaviour
 {
     [SerializeField] private DoorScript ceilingDoor;
     [SerializeField] private CharacterController controller;
+    [SerializeField] private PlayerController playerController;
 
     private GameObject flashLight;
     private AudioSource rattleSound;
@@ -20,7 +21,7 @@ public class GameEnd : MonoBehaviour
     {
         yield return new WaitForSeconds(duration);
 
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(0);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -30,6 +31,7 @@ public class GameEnd : MonoBehaviour
             ceilingDoor.ChangeDoorState();
             flashLight.SetActive(false);
             controller.enabled = false;
+            playerController.enabled = false;
             rattleSound.Play();
             StartCoroutine(waitForSound(5));
         }

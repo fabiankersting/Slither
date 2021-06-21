@@ -12,6 +12,8 @@ public class Flashlight : MonoBehaviour
     [SerializeField] private KeyCode toggleKey = KeyCode.F;
     [SerializeField] private KeyCode rechargeKey = KeyCode.E;
 
+    [SerializeField] private bool allowedToUse = true;
+
     [SerializeField] private bool autoReduce = true;
     [SerializeField] private float reduceSpeed = 1.0f;
 
@@ -36,6 +38,7 @@ public class Flashlight : MonoBehaviour
 
     [SerializeField] new private Camera camera = null;
     [SerializeField] private GameObject flashlight = null;
+    private GameManager gameManager = null;
 
     #endregion
 
@@ -115,6 +118,12 @@ public class Flashlight : MonoBehaviour
 
     #endregion
 
+    private void Awake()
+    {
+        if (gameManager == null)
+            gameManager = FindObjectOfType<GameManager>();
+    }
+
     private void Start()
     {
         Init();
@@ -122,7 +131,7 @@ public class Flashlight : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(toggleKey))
+        if (Input.GetKeyDown(toggleKey) && allowedToUse)
         {
             ToggleFlashlight(!usingFlashlight, true);
         }
@@ -249,6 +258,9 @@ public class Flashlight : MonoBehaviour
 
     private void Init()
     {
+        if (gameManager.GetNightState())
+            allowedToUse = false;
+
         defaultIntensity = Light.intensity;
         flashlightLife = maxFlashlightLife;
 
@@ -264,6 +276,7 @@ public class Flashlight : MonoBehaviour
 
     public void ActiveFlashlight()
     {
+        allowedToUse = true;
         ToggleFlashlight(!usingFlashlight, true);
     }
 }
