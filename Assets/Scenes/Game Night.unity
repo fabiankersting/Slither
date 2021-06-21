@@ -20,11 +20,11 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
+  m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 9af23ba5fa5364ff598888460e0e2759, type: 2}
   m_HaloStrength: 0.5
@@ -11240,7 +11240,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e79f2631572b9c6488aa1338bfff8fcd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: bb775703c9bdfc742ac2253b1a2efcdb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -11340,6 +11340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ceilingDoor: {fileID: 8461889979150497894}
   controller: {fileID: 4569999647146900005}
+  playerController: {fileID: 4569999647146900004}
 --- !u!65 &988972855
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -44963,7 +44964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2259107857184302481, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5689888
+      value: 2.398
       objectReference: {fileID: 0}
     - target: {fileID: 2259107857184302481, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -45004,6 +45005,22 @@ PrefabInstance:
     - target: {fileID: 2259107857184302486, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506097978277540100, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506097978277540100, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506097978277540100, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5506097978277540100, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6436460565825557438, guid: 3da316aad048f9e4ea8e8e7f1890eb0e, type: 3}
       propertyPath: textObject
@@ -67919,7 +67936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4569999647301294170, guid: 9ba7f06f520a2fa48b7a75cf9345cfcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 7.584
+      value: 5.665
       objectReference: {fileID: 0}
     - target: {fileID: 4569999647301294170, guid: 9ba7f06f520a2fa48b7a75cf9345cfcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -116485,7 +116502,7 @@ PrefabInstance:
     - target: {fileID: 5658015736355606331, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 231624878a5e7ad4dbb8989c76e1f66f, type: 3}
+      objectReference: {fileID: 8300000, guid: 594e8ab2b8e10e249bba8185b322660f, type: 3}
     - target: {fileID: 8388909788438903662, guid: d9f25480c9a663c45828bd358e2e870d, type: 3}
       propertyPath: textObject
       value: 
