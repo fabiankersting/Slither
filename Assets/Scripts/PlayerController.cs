@@ -111,7 +111,10 @@ public class PlayerController : MonoBehaviour
     private void ChangeFootstepSoundOnce()
     {
         if (gameManager.GetNightState() && !changedFootstepSoundOnSceneChange)
+        {
             onGrass = false;
+            changedFootstepSoundOnSceneChange = true;
+        }
     }
 
     private IEnumerator DelayedActivate(float duration)
