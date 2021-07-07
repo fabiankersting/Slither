@@ -20,6 +20,12 @@ public class SnakeHead : MonoBehaviour
             var lookPos = player.transform.position - transform.position;
             Quaternion rotation = Quaternion.LookRotation(lookPos);
             transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime*headMoveSpeed);
+
+            // lock rotation if player walks behind the snake
+            if (this.transform.localEulerAngles.y < 30)
+            {
+                this.transform.localEulerAngles = new Vector3(this.transform.rotation.x,30,this.transform.rotation.z);
+            }
         }
         else
         {
