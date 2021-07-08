@@ -1,4 +1,3 @@
-# Horror-Game-Semester-Project
 # Das Unsichtbare Grauen: Slither
 
 Spiel in Unity über MainMenu Szene starten.
